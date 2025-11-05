@@ -1,0 +1,227 @@
+%-------------------------
+% Resume in Latex
+% Author : Improved version of Aras Gungore's template
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,12pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\input{glyphtounicode}
+
+% Define custom dark blue-violet color
+\definecolor{customblue}{HTML}{110266}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins for better spacing
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting with blue color and better spacing
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\Large\color{customblue}
+}{}{0em}{}[\color{customblue}\titlerule \vspace{-3pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\normalsize{
+    {#1 \vspace{-0.5pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-0.5pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\color{customblue}#1} & #2 \\
+      \textit{\normalsize#3} & \textit{\normalsize #4} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-0.5pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \normalsize\textbf{\color{customblue}#1} & #2 \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-1pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}, itemsep=1pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%---------- HEADING ----------
+\begin{minipage}[t]{0.82\textwidth}
+    \vspace{0pt}
+    {\Huge \textbf{{Abderrahim BENAISSA}}} \\[3pt]
+    {\large {Future Digital Transformation Engineer}} \\[2pt]
+    {\normalsize\textit{Seeking a 4 to 6-month PFE internship starting from February 01st, 2026.}} \\[8pt]
+    \normalsize
+    \faMobile \hspace{1pt} \href{tel:+212697075666}{\textcolor{customblue}+212 697 075 666} \\[2pt]
+    \normalsize
+    \faAt { a}\href{mailto:abderrahimbenaissa15@gmail.com}{\textcolor{customblue}bderrahimbenaissa15@gmail.com} \\[2pt]
+    \faLinkedinSquare \hspace{1pt} \href{https://www.linkedin.com/in/abderrahim-benaissa-111623255/}{\textcolor{customblue}LinkedIn} \\[2pt]
+    \faGithub \hspace{1pt} \href{https://github.com/Abderrahim-DT}{\textcolor{customblue}GitHub} \\[2pt]
+    \faGlobe \hspace{1pt} \href{https://benaissa-abderrahim.vercel.app/}{\textcolor{customblue}Portfolio}} \\[2pt]
+    \faMapMarker \hspace{1pt} \textcolor{customblue}{Casablanca, Morocco}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.15\textwidth}
+    \vspace{0pt}
+    \includegraphics[width=3.0cm,height=4.0cm]{PIC ABDERRAHIM (1).png}
+    \vspace{4pt}
+    
+    \centering
+    \includegraphics[width=2.2cm,height=2.2cm]{linkedin_qr.png}
+    \tiny\textcolor{customblue}{Scannez pour LinkedIn}
+\end{minipage}
+\vspace{-8pt}
+
+%----------- EXPERIENCE -----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {End-of-Year Internship at EduDiagno}{Remotely, India}
+      {Associate DevOps Engineer: AI Powered Hiring platform}{Jul 2025 - Oct 2025}
+      \resumeItemListStart
+            \resumeItem{Optimized CI/CD pipelines using GitHub Actions, reducing deployment runtime from 12 minutes to 57 seconds}
+            \resumeItem{Managed  dev/prod instances on GCP (Google Cloud Platform)}
+            \resumeItem{Integrated Docker containerization into existing deployment workflows}
+            \resumeItem{Developed automated log aggregation and monitoring using shell scripts, centralizing logging across dev/prod environments and reducing troubleshooting time}
+        \resumeItemListEnd
+        
+    \resumeSubheading
+      {Introductory Internship at ENSA-BM}{Beni-Mellal, Morocco}
+      {Intern Software Engineer: Wherehousing odoo module}{Jul 2024 - Aug 2024}
+        \resumeItemListStart
+            \resumeItem{Designed data models using the Merise methodology for database architecture optimization}
+            \resumeItem{Developed user interfaces using XML for enhanced user experience}
+            \resumeItem{Implemented barcode generation with Python to optimize product tracking efficiency}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\vspace{-4pt}
+
+%----------- EDUCATION -----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National School of Applied Sciences (ENSA-BM)}{Beni-Mellal, Morocco}
+      {Engineering Cycle in Industrial Digital Transformation}{Sep 2021 - Jun 2026}
+  \resumeSubHeadingListEnd
+
+\vspace{-4pt}
+
+%----------- PROJECTS -----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+        {FamilyCare Project 02: Microservices Healthcare Management Platform $|$}{\textcolor{customblue}2025}
+          \resumeItemListStart
+            \resumeItem{Architected full-stack microservices platform with Spring Boot (Patient, Billing, Analytics, Auth services)}
+            \resumeItem{Orchestrated container deployment using Docker and multi-service architecture on AWS ECS}
+            \resumeItem{Implemented event-driven architecture using Apache Kafka for real-time data streaming}
+            \resumeItem{Established gRPC inter-service communication and designed RESTful APIs with OpenAPI documentation}
+            \resumeItem{Deployed Infrastructure as Code (IaC) using AWS CloudFormation for VPC, RDS, and MSK clusters}
+            \resumeItem{Secured application using JWT authentication and Spring Security framework}
+          \resumeItemListEnd
+
+    \resumeProjectHeading
+        {HomeLab CI/CD Project: Distributed DevOps Infrastructure $|$}{\textcolor{customblue}2025}
+          \resumeItemListStart
+            \resumeItem{Architected a complete DevOps platform with 5 VMware VMs (Jenkins Master/Agent, SonarQube, ArgoCD, K8s)}
+            \resumeItem{Orchestrated end-to-end CI/CD pipelines, SonarQube code analysis, and GitOps deployments via ArgoCD}
+            \resumeItem{Configured infrastructure with Traefik ingress, Cert-Manager, and SSL via Let's Encrypt}
+          \resumeItemListEnd
+      \resumeProjectHeading
+        {End-of-Year Project: AI Agent for ENSA-BM $|$}{\textcolor{customblue}2025}
+          \resumeItemListStart
+            \resumeItem{Developed web interface using ReactJS}
+            \resumeItem{Built ETL pipelines with Spring AI and Langchain for contextualization using RAG (Retrieval-Augmented Generation)}
+            \resumeItem{Containerized applications using Docker}
+          \resumeItemListEnd
+
+      
+          
+      
+          \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\vspace{-4pt}
+
+%----------- SKILLS -----------
+\section{Technical Skills}
+  \resumeSubHeadingListStart
+    \normalsize{\item{
+        \textbf{Programming languages :} Java 17/21, Python, C/C++ \\[4pt]
+        \textbf{Backend Development:} Spring Boot (Java), PostgreSQL, MySQL, RESTful APIs, Microservices \\[4pt]
+        \textbf{DevOps \& Cloud:} Docker, Git, CI/CD (GitHub Actions, Jenkins, ArgoCD), AWS, Bash Scripting \\[4pt]
+        \textbf{Networks \& Infrastructure:} Linux Administration, OpenStack, Docker Swarm, DHCP, DNS, Routing, Firewalls, Wireshark, nmap \\[4pt]
+        \textbf{Testing \& Quality Assurance:} JUnit, Mockito, SonarQube \\[4pt]
+        \textbf{Data Science/Engineering:} Machine Learning (sklearn), Deep Learning, SQL, NLP, LLMs,PromptEngineering, RAG, Spring AI, Apache Hadoop, PowerBI \\[4pt]
+        \textbf{Computer skills:} Excel, Microsoft Word, PowerPoint\\[4pt]
+    }}
+  \resumeSubHeadingListEnd
+
+\vspace{-4pt}
+
+%-----------Languages -----------
+\section{Languages}
+  \resumeSubHeadingListStart
+    \resumeItemListStart
+            \resumeItem{Arabic (Native)}
+            \resumeItem{French (Fluent)}
+            \resumeItem{English (Professional)}
+          \resumeItemListEnd
+  \resumeSubHeadingListEnd
+%----------- AWARDS AND CERTIFICATES -----------
+\section{Awards and Certificates}
+  \resumeSubHeadingListStart
+    \resumeItemListStart
+            \resumeItem{Winner of the Moroccan TSP Competition 2025}
+            \resumeItem{Former President of the Industry 4.0 Club at ENSA-BM}
+            \resumeItem{Preparation program for AWS Cloud Practitioner certification}
+          \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\end{document}
