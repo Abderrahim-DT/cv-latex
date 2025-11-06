@@ -49,6 +49,6 @@ jobs:
         cd portfolio
         git config user.name "GitHub Actions Bot"
         git config user.email "actions@github.com"
-        git add public/cv-en.pdf public/cv-fr.pdf
+        git add public/cv-en_Abderrahim_BENAISSA.pdf public/cv-fr_Abderrahim_BENAISSA.pdf
         git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update CVs from cv-latex repository"
         git push
