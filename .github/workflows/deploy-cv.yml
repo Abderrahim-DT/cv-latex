@@ -18,21 +18,21 @@ jobs:
     - name: Compile LaTeX CV (English)
       uses: xu-cheng/latex-action@v3
       with:
-        root_file: cv-en.tex
+        root_file: cv-en_Abderrahim_BENAISSA.tex
         args: -pdf -interaction=nonstopmode -file-line-error
     
     # Step 3: Compile French CV
     - name: Compile LaTeX CV (French)
       uses: xu-cheng/latex-action@v3
       with:
-        root_file: cv-fr.tex
+        root_file: cv-fr_Abderrahim_BENAISSA.tex
         args: -pdf -interaction=nonstopmode -file-line-error
     
     # Step 4: Checkout portfolio repository
     - name: Checkout portfolio repository
       uses: actions/checkout@v3
       with:
-        repository: Abderrahim-DT/benaissa-abderrahim  # Change this!
+        repository: Abderrahim-DT/benaissa-abderrahim
         token: ${{ secrets.PORTFOLIO_DEPLOY_TOKEN }}
         path: portfolio
     
@@ -40,9 +40,9 @@ jobs:
     - name: Copy PDFs to portfolio
       run: |
         mkdir -p portfolio/public
-        cp cv-en.pdf portfolio/public/cv-en.pdf
-        cp cv-fr.pdf portfolio/public/cv-fr.pdf
-    
+        cp cv-en_Abderrahim_BENAISSA.pdf portfolio/public/cv-en_Abderrahim_BENAISSA.pdf
+        cp cv-fr_Abderrahim_BENAISSA.pdf portfolio/public/cv-fr_Abderrahim_BENAISSA.pdf
+
     # Step 6: Commit and push to portfolio
     - name: Commit and push to portfolio
       run: |
