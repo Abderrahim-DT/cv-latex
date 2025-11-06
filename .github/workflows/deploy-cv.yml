@@ -1,0 +1,54 @@
+name: Compile and Deploy CV
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # Step 1: Checkout CV repository
+    - name: Checkout CV repository
+      uses: actions/checkout@v3
+    
+    # Step 2: Compile English CV
+    - name: Compile LaTeX CV (English)
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: cv-en.tex
+        args: -pdf -interaction=nonstopmode -file-line-error
+    
+    # Step 3: Compile French CV
+    - name: Compile LaTeX CV (French)
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: cv-fr.tex
+        args: -pdf -interaction=nonstopmode -file-line-error
+    
+    # Step 4: Checkout portfolio repository
+    - name: Checkout portfolio repository
+      uses: actions/checkout@v3
+      with:
+        repository: Abderrahim-DT/benaissa-abderrahim  # Change this!
+        token: ${{ secrets.PORTFOLIO_DEPLOY_TOKEN }}
+        path: portfolio
+    
+    # Step 5: Copy PDFs to portfolio public folder
+    - name: Copy PDFs to portfolio
+      run: |
+        mkdir -p portfolio/public
+        cp cv-en.pdf portfolio/public/cv-en.pdf
+        cp cv-fr.pdf portfolio/public/cv-fr.pdf
+    
+    # Step 6: Commit and push to portfolio
+    - name: Commit and push to portfolio
+      run: |
+        cd portfolio
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+        git add public/cv-en.pdf public/cv-fr.pdf
+        git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update CVs from cv-latex repository"
+        git push
